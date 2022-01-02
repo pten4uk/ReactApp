@@ -1,0 +1,23 @@
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 10px;
+
+  p {
+    font-size: .4rem;
+
+    sup {
+      font-size: .4rem;
+    }
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+    -webkit-user-drag: none;
+  }
+}

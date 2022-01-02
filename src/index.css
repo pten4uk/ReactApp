@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 50px; }
+
+body {
+  background-color: #d7d7d7; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100px;
+  margin: 10px auto;
+  background-color: rgba(39, 64, 107, 0.9);
+  border-radius: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  header h1 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-style: italic;
+    color: #d7d7d7; }
+
+main {
+  margin: 0 auto;
+  width: 95%; }
+  main .sity {
+    margin: 0 auto; }
+  main .datetime {
+    margin: 10px;
+    font-size: 0.5rem; }
+
+.weather-now {
+  margin-top: 20px; }
+  .weather-now span.temp {
+    font-size: 2rem; }
+  .weather-now span.param {
+    font-size: 0.8rem; }
+  .weather-now sup {
+    position: relative;
+    left: 5px;
+    top: -5px;
+    font-size: 0.8rem; }
+
+.weather-today {
+  display: flex;
+  margin-top: 20px;
+  height: 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: grab; }
+
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px; }
+  .weather-item p {
+    font-size: .4rem; }
+    .weather-item p sup {
+      font-size: .4rem; }
+  .weather-item img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+    -webkit-user-drag: none; }
