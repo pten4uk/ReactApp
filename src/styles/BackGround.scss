@@ -1,0 +1,16 @@
+.background {
+  background-image: url(https://oboitd.ru/images/goods/big/20200123093425_Oblaka_7-026.jpg);
+  height: 100vh;
+  animation: bg-movement 150s linear infinite;
+}
+
+@keyframes bg-movement {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+  100% {
+    background-position-x: -1300px;
+    background-position-y: -300px;
+  }
+}

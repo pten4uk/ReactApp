@@ -4,34 +4,50 @@
   font-family: sans-serif;
   font-size: 50px; }
 
-body {
+html, body {
+  height: 100vh;
   background-color: #d7d7d7; }
 
+::-webkit-scrollbar {
+  height: 2px; }
+
+.background {
+  background-image: url(https://oboitd.ru/images/goods/big/20200123093425_Oblaka_7-026.jpg);
+  height: 100vh;
+  animation: bg-movement 150s linear infinite; }
+
+@keyframes bg-movement {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0; }
+  100% {
+    background-position-x: -1300px;
+    background-position-y: -300px; } }
+
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 95%;
-  height: 100px;
-  margin: 10px auto;
-  background-color: rgba(39, 64, 107, 0.9);
-  border-radius: 15px;
+  padding: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
   header h1 {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    font-style: italic;
-    color: #d7d7d7; }
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    transition: transform 1s; }
+    header h1 img {
+      position: relative;
+      top: 3px;
+      left: 5px;
+      width: 15px;
+      height: 15px; }
+    header h1.active {
+      transform: translate(0, 20px); }
 
 main {
   margin: 0 auto;
   width: 95%; }
-  main .sity {
-    margin: 0 auto; }
   main .datetime {
     margin: 10px;
     font-size: 0.5rem; }
@@ -57,7 +73,8 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: grab; }
+  cursor: grab;
+  overflow-x: auto; }
 
 .weather-item {
   display: flex;

@@ -1,13 +1,16 @@
 .weather-now {
   margin-top: 20px;
+
   span {
     &.temp {
       font-size: 2rem;
     }
+
     &.param {
       font-size: 0.8rem;
     }
   }
+
   sup {
     position: relative;
     left: 5px;

@@ -1,17 +1,17 @@
 import React from "react";
 
 
-function WeatherItem() {
+function WeatherTodayItem(props) {
     return (
         <div className="weather-item">
-            <p>22:00</p>
+            <p>{props.time}</p>
             <img src={getWeather("cloudy")} alt="No"/>
             <p className="temp">-7<sup>&deg;C</sup></p>
         </div>
     );
 }
 
-export default WeatherItem;
+export default WeatherTodayItem;
 
 function getWeather(param) {
     const weather = {

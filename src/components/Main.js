@@ -7,9 +7,9 @@ import WeatherToday from "./WeatherToday";
 function Main() {
     const [date, setDate] = React.useState(getDate());
     setInterval(() => setDate(getDate()), 1000*60);
+
     return (
         <main>
-            <section className="sity">Байбаки</section>
             <WeatherNow/>
             <section className="datetime">{date}</section>
             <WeatherToday/>
