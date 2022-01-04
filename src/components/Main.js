@@ -4,15 +4,15 @@ import WeatherNow from "./WeatherNow";
 import WeatherToday from "./WeatherToday";
 
 
-function Main() {
+function Main(props) {
     const [date, setDate] = React.useState(getDate());
     setInterval(() => setDate(getDate()), 1000*60);
 
     return (
         <main>
-            <WeatherNow/>
+            <WeatherNow active={props.active}/>
             <section className="datetime">{date}</section>
-            <WeatherToday/>
+            <WeatherToday active={props.active}/>
         </main>
     );
 }

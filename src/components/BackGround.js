@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
+
 
 
 function BackGround(props) {
-    let [active, setActive] = useState(false);
-    const getWheelDir = (e) => e.deltaY > 0 ? setActive(true) : setActive(false);
 
     return (
-        <div className="background" onWheel={getWheelDir}>
-            {props.children}
+        <div className={props.active ? "background active" : "background"}>
+            <div className="shadow"/>
         </div>
     );
 }
 
 export default BackGround;
+
 

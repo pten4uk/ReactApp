@@ -3,9 +3,6 @@ import React from "react";
 import WeatherTodayItem from "./WeatherTodayItem";
 
 function WeatherToday() {
-    navigator.geolocation.getCurrentPosition(position => {
-        console.log(position);
-    });
     return (
         <section className="weather-today"
                  onMouseDown={checkGrab}

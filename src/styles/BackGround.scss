@@ -1,16 +1,48 @@
 .background {
-  background-image: url(https://oboitd.ru/images/goods/big/20200123093425_Oblaka_7-026.jpg);
+  position: absolute;
+
+  background-image: url('https://stock.liga.ws/wp-content/uploads/sites/22/2019/07/Sky-3.jpg');
+  background-position-y: -400px;
+
+  width: 100%;
   height: 100vh;
-  animation: bg-movement 150s linear infinite;
+
+  opacity: 0;
+
+  transition: all .5s;
+  animation: bg-movement 150s ease-in-out infinite;
+  transform: translate(0, -100px);
+
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, .4);
+
+  z-index: 1;
+
+  .shadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 80px 90px $color-white;
+  }
+
+  &.active {
+    transform: none;
+    background-position-y: -300px;
+    opacity: 100%;
+  }
+
 }
 
 @keyframes bg-movement {
   0% {
     background-position-x: 0;
-    background-position-y: 0;
+    background-position-y: -300px;
+  }
+  99% {
+    background-position-x: -1300px;
+    background-position-y: -600px;
   }
   100% {
-    background-position-x: -1300px;
+    background-position-x: 0;
     background-position-y: -300px;
   }
 }

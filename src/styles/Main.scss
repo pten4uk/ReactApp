@@ -1,6 +1,9 @@
 main {
+  position: relative;
   margin: 0 auto;
   width: 95%;
+
+  z-index: 2;
 
   .datetime {
     margin: 10px;

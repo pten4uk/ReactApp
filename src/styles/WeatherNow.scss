@@ -1,13 +1,35 @@
 .weather-now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  height: 100px;
+
   margin-top: 20px;
 
+  transition: all .5s;
+
   span {
+    transition: all .5s;
+
     &.temp {
+      transform: translate(-210px, 0);
       font-size: 2rem;
+
+      &.active {
+        transform: none;
+        margin: 0 auto;
+      }
     }
 
     &.param {
+      transform: translate(-70px, -60px);
       font-size: 0.8rem;
+
+      &.active {
+        transform: none
+      }
     }
   }
 
@@ -16,5 +38,10 @@
     left: 5px;
     top: -5px;
     font-size: 0.8rem;
+  }
+
+  &.active {
+    height: 180px;
+    margin: 80px auto 100px auto;
   }
 }

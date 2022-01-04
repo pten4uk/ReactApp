@@ -5,6 +5,7 @@
   font-size: 50px; }
 
 html, body {
+  position: relative;
   height: 100vh;
   background-color: #d7d7d7; }
 
@@ -12,57 +13,101 @@ html, body {
   height: 2px; }
 
 .background {
-  background-image: url(https://oboitd.ru/images/goods/big/20200123093425_Oblaka_7-026.jpg);
+  position: absolute;
+  background-image: url("https://stock.liga.ws/wp-content/uploads/sites/22/2019/07/Sky-3.jpg");
+  background-position-y: -400px;
+  width: 100%;
   height: 100vh;
-  animation: bg-movement 150s linear infinite; }
+  opacity: 0;
+  transition: all .5s;
+  animation: bg-movement 150s ease-in-out infinite;
+  transform: translate(0, -100px);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
+  z-index: 1; }
+  .background .shadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 80px 90px #d7d7d7; }
+  .background.active {
+    transform: none;
+    background-position-y: -300px;
+    opacity: 100%; }
 
 @keyframes bg-movement {
   0% {
     background-position-x: 0;
-    background-position-y: 0; }
-  100% {
+    background-position-y: -300px; }
+  99% {
     background-position-x: -1300px;
+    background-position-y: -600px; }
+  100% {
+    background-position-x: 0;
     background-position-y: -300px; } }
 
 header {
+  position: relative;
   width: 95%;
   padding: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  z-index: 2; }
   header h1 {
     display: flex;
     align-items: center;
     font-weight: lighter;
-    transition: transform 1s; }
+    transition: transform .5s;
+    z-index: 2; }
     header h1 img {
       position: relative;
       top: 3px;
       left: 5px;
       width: 15px;
-      height: 15px; }
+      height: 15px;
+      z-index: 2; }
     header h1.active {
-      transform: translate(0, 20px); }
+      transform: translate(10px, 20px); }
 
 main {
+  position: relative;
   margin: 0 auto;
-  width: 95%; }
+  width: 95%;
+  z-index: 2; }
   main .datetime {
     margin: 10px;
     font-size: 0.5rem; }
 
 .weather-now {
-  margin-top: 20px; }
-  .weather-now span.temp {
-    font-size: 2rem; }
-  .weather-now span.param {
-    font-size: 0.8rem; }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100px;
+  margin-top: 20px;
+  transition: all .5s; }
+  .weather-now span {
+    transition: all .5s; }
+    .weather-now span.temp {
+      transform: translate(-210px, 0);
+      font-size: 2rem; }
+      .weather-now span.temp.active {
+        transform: none;
+        margin: 0 auto; }
+    .weather-now span.param {
+      transform: translate(-70px, -60px);
+      font-size: 0.8rem; }
+      .weather-now span.param.active {
+        transform: none; }
   .weather-now sup {
     position: relative;
     left: 5px;
     top: -5px;
     font-size: 0.8rem; }
+  .weather-now.active {
+    height: 180px;
+    margin: 80px auto 100px auto; }
 
 .weather-today {
   display: flex;
