@@ -2,15 +2,19 @@ import React from "react";
 
 import WeatherTodayItem from "./WeatherTodayItem";
 
-function WeatherToday() {
+function WeatherToday(props) {
+    let listWeather = props.weather ? getWeatherForTime(props.weather) : [];
+
     return (
         <section className="weather-today"
                  onMouseDown={checkGrab}
                  onMouseUp={checkGrab}
                  onMouseMove={grabScroll}>
             {
-                getAllDayTime().map(currentTime =>
-                    <WeatherTodayItem key={currentTime} time={currentTime}/>)
+                listWeather ? listWeather.map(weather =>
+                    <WeatherTodayItem key={weather.dt}
+                                      weather={weather}/>) :
+                    ""
             }
         </section>
     );
@@ -31,13 +35,16 @@ function grabScroll(event) {
     }
 }
 
-function getAllDayTime() {
-    let allDayTime = [];
-
-    for (let i = 1; i < 24; i++) {
-        if (i < 10) allDayTime.push(`0${i}:00`);
-        else allDayTime.push(`${i}:00`);
-    }
-
-    return allDayTime;
+function getWeatherForTime(weather) {
+    let listWeather = [];
+    weather.list.forEach(elem => {
+        listWeather.push(
+            {
+                dt: elem.dt_txt,
+                temp: elem.main.temp,
+                description: elem.weather[0].main,
+            }
+        )
+    })
+    return listWeather;
 }

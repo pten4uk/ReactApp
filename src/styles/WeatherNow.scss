@@ -1,7 +1,6 @@
 .weather-now {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
 
   height: 100px;
@@ -14,17 +13,17 @@
     transition: all .5s;
 
     &.temp {
-      transform: translate(-210px, 0);
+      transform: translate(-200px, 0);
       font-size: 2rem;
 
       &.active {
         transform: none;
-        margin: 0 auto;
       }
     }
 
     &.param {
-      transform: translate(-70px, -60px);
+      transform: translate(100px, -80px);
+      text-transform: capitalize;
       font-size: 0.8rem;
 
       &.active {

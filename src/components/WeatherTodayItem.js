@@ -2,11 +2,16 @@ import React from "react";
 
 
 function WeatherTodayItem(props) {
+    let weather = props.weather;
+    let dt = new Date(weather.dt);
+    let temp = String(weather.temp).split(".")[0];
+    let weatherParam = String(weather.description);
+
     return (
         <div className="weather-item">
-            <p>{props.time}</p>
-            <img src={getWeather("cloudy")} alt="No"/>
-            <p className="temp">-7<sup>&deg;C</sup></p>
+            <p>{getTime(dt)}</p>
+            <img src={getWeather(weatherParam)} alt="No"/>
+            <p className="temp">{temp}<sup>&deg;C</sup></p>
         </div>
     );
 }
@@ -15,13 +20,18 @@ export default WeatherTodayItem;
 
 function getWeather(param) {
     const weather = {
-        cloudy: "https://cdn-icons-png.flaticon.com/512/365/365229.png",
-        night: "https://cdn-icons-png.flaticon.com/512/365/365223.png",
-        rain: "https://cdn-icons-png.flaticon.com/512/365/365226.png",
-        snow: "https://cdn-icons-png.flaticon.com/512/365/365230.png",
-        storm: "https://cdn-icons-png.flaticon.com/512/365/365235.png",
-        sun: "https://cdn-icons-png.flaticon.com/512/365/365237.png",
-        sunny_rain: "https://cdn-icons-png.flaticon.com/512/365/365225.png",
+        Clouds: "https://cdn-icons-png.flaticon.com/512/365/365229.png",
+        Night: "https://cdn-icons-png.flaticon.com/512/365/365223.png",
+        Rain: "https://cdn-icons-png.flaticon.com/512/365/365226.png",
+        Snow: "https://cdn-icons-png.flaticon.com/512/365/365230.png",
+        Storm: "https://cdn-icons-png.flaticon.com/512/365/365235.png",
+        Sun: "https://cdn-icons-png.flaticon.com/512/365/365237.png",
+        Sunny_rain: "https://cdn-icons-png.flaticon.com/512/365/365225.png",
     }
     return weather[param];
+}
+
+function getTime(date) {
+    let hours = date.getHours();
+    return hours < 10 ? `0${hours}:00` : `${hours}:00`;
 }

@@ -18,7 +18,7 @@ header {
     transition: transform .5s;
     z-index: 2;
 
-    img {
+    .geo {
       position: relative;
       top: 3px;
       left: 5px;
@@ -31,4 +31,12 @@ header {
       transform: translate(10px, 20px);
     }
   }
+
+  .refresh {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
 }
