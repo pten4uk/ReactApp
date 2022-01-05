@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font-size: 50px; }
+  font-size: 30px; }
 
 html, body {
   position: relative;
   height: 100vh;
-  background-color: #d7d7d7; }
+  background-color: #d7d7d7;
+  overflow: hidden; }
 
 ::-webkit-scrollbar {
   height: 2px; }
@@ -62,17 +63,17 @@ header {
     z-index: 2; }
     header h1 .geo {
       position: relative;
-      top: 3px;
+      top: 1px;
       left: 5px;
-      width: 15px;
-      height: 15px;
+      width: 10px;
+      height: 10px;
       z-index: 2; }
     header h1.active {
       transform: translate(10px, 20px); }
   header .refresh {
-    position: fixed;
+    position: absolute;
     top: 20px;
-    right: 20px;
+    right: 30px;
     width: 30px;
     height: 30px; }
 
@@ -83,7 +84,7 @@ main {
   z-index: 2; }
   main .datetime {
     margin: 10px;
-    font-size: 0.5rem; }
+    font-size: 0.6rem; }
 
 .weather-now {
   display: flex;
@@ -95,12 +96,12 @@ main {
   .weather-now span {
     transition: all .5s; }
     .weather-now span.temp {
-      transform: translate(-200px, 0);
+      transform: translate(-120px, 0);
       font-size: 2rem; }
       .weather-now span.temp.active {
         transform: none; }
     .weather-now span.param {
-      transform: translate(100px, -80px);
+      transform: translate(70px, -50px);
       text-transform: capitalize;
       font-size: 0.8rem; }
       .weather-now span.param.active {
@@ -133,11 +134,11 @@ main {
   align-items: center;
   margin: 0 10px; }
   .weather-item p {
-    font-size: .4rem; }
+    font-size: .5rem; }
     .weather-item p sup {
       font-size: .4rem; }
   .weather-item img {
     height: 40px;
     width: 40px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     -webkit-user-drag: none; }

@@ -13,7 +13,7 @@
     transition: all .5s;
 
     &.temp {
-      transform: translate(-200px, 0);
+      transform: translate(-120px, 0);
       font-size: 2rem;
 
       &.active {
@@ -22,7 +22,7 @@
     }
 
     &.param {
-      transform: translate(100px, -80px);
+      transform: translate(70px, -50px);
       text-transform: capitalize;
       font-size: 0.8rem;
 

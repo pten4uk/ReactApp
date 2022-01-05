@@ -1,7 +1,7 @@
 $color-white: #d7d7d7;
 $color-gray-blue: rgb(146, 199, 211);
 
-$base-font-size: 50px;
+$base-font-size: 30px;
 
 * {
   margin: 0;
@@ -15,6 +15,7 @@ html, body {
   position: relative;
   height: 100vh;
   background-color: $color-white;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
