@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font-size: 30px; }
+  font-size: 50px; }
 
 html, body {
   position: relative;
@@ -89,19 +89,22 @@ main {
 .weather-now {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  height: 100px;
+  height: 130px;
   margin-top: 20px;
   transition: all .5s; }
   .weather-now span {
-    transition: all .5s; }
+    display: block;
+    transition: all .5s;
+    margin: 0 auto; }
     .weather-now span.temp {
-      transform: translate(-120px, 0);
+      transform: translate(-250px, 0);
       font-size: 2rem; }
       .weather-now span.temp.active {
         transform: none; }
     .weather-now span.param {
-      transform: translate(70px, -50px);
+      transform: translate(150px, -70px);
       text-transform: capitalize;
       font-size: 0.8rem; }
       .weather-now span.param.active {
@@ -117,7 +120,8 @@ main {
 
 .weather-today {
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 30px;
   height: 120px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-user-select: none;
@@ -132,7 +136,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10px; }
+  margin: 0 15px; }
   .weather-item p {
     font-size: .5rem; }
     .weather-item p sup {
@@ -142,3 +146,131 @@ main {
     width: 40px;
     margin: 5px 0;
     -webkit-user-drag: none; }
+
+@media screen and (max-width: 674px) {
+  * {
+    font-size: 40px; }
+  header h1 .geo {
+    width: 15px;
+    height: 15px; }
+  header .refresh {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px; }
+  main .datetime {
+    font-size: 0.7rem; }
+  .weather-now {
+    height: 100px; }
+    .weather-now span.temp {
+      transform: translate(-180px, 0); }
+    .weather-now span.param {
+      transform: translate(90px, -60px);
+      font-size: 0.9rem; }
+    .weather-now sup {
+      font-size: 0.7rem; }
+    .weather-now.active {
+      height: 160px; }
+  .weather-today {
+    justify-content: normal; }
+    .weather-today .weather-item p {
+      font-size: .6rem; }
+    .weather-today .weather-item img {
+      margin: 7px 0; } }
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 30px; }
+  header h1 .geo {
+    width: 13px;
+    height: 13px; }
+  header .refresh {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 20px;
+    height: 20px; }
+  main .datetime {
+    font-size: 0.7rem; }
+  .weather-now {
+    height: 100px; }
+    .weather-now span.temp {
+      transform: translate(-140px, 0); }
+    .weather-now span.param {
+      transform: translate(80px, -50px);
+      font-size: 0.9rem; }
+    .weather-now sup {
+      font-size: 0.7rem; }
+    .weather-now.active {
+      height: 120px; }
+  .weather-today {
+    justify-content: normal; }
+    .weather-today .weather-item p {
+      font-size: .6rem; }
+    .weather-today .weather-item img {
+      margin: 7px 0; } }
+
+@media screen and (max-width: 380px) {
+  * {
+    font-size: 30px; }
+  header h1 .geo {
+    width: 13px;
+    height: 13px; }
+  header .refresh {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 20px;
+    height: 20px; }
+  main .datetime {
+    font-size: 0.7rem; }
+  .weather-now {
+    height: 100px; }
+    .weather-now span.temp {
+      transform: translate(-110px, 0); }
+    .weather-now span.param {
+      transform: translate(55px, -50px);
+      font-size: 0.9rem; }
+    .weather-now sup {
+      font-size: 0.7rem; }
+    .weather-now.active {
+      height: 120px; }
+  .weather-today {
+    justify-content: normal; }
+    .weather-today .weather-item p {
+      font-size: .6rem; }
+    .weather-today .weather-item img {
+      margin: 7px 0; } }
+
+@media screen and (max-width: 300px) {
+  * {
+    font-size: 25px; }
+  header h1 .geo {
+    width: 13px;
+    height: 13px; }
+  header .refresh {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 20px;
+    height: 20px; }
+  main .datetime {
+    font-size: 0.9rem; }
+  .weather-now {
+    height: 100px; }
+    .weather-now span.temp {
+      transform: translate(-100px, 0); }
+    .weather-now span.param {
+      transform: translate(45px, -55px);
+      font-size: 0.9rem; }
+    .weather-now sup {
+      font-size: 0.7rem; }
+    .weather-now.active {
+      height: 100px; }
+  .weather-today {
+    justify-content: normal; }
+    .weather-today .weather-item p {
+      font-size: .6rem; }
+    .weather-today .weather-item img {
+      margin: 7px 0; } }

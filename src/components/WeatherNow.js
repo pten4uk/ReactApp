@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 function WeatherNow(props) {
-    let temp = String(props.temp).split(".")[0];
+    let temp = getTemp(props.temp);
     let param = String(props.param)
     return (
         <section className={getClassName(props, "weather-now")}>
@@ -18,4 +18,10 @@ export default WeatherNow;
 
 function getClassName(props, str) {
     return props.active ? `${str} active` : str;
+}
+
+function getTemp(temp) {
+    let str = String(temp).split(".")[0];
+    if (str.includes('0')) return "0";
+    return str;
 }

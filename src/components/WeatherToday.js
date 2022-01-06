@@ -13,8 +13,7 @@ function WeatherToday(props) {
             {
                 listWeather ? listWeather.map(weather =>
                     <WeatherTodayItem key={weather.dt}
-                                      weather={weather}/>) :
-                    ""
+                                      weather={weather}/>) : ""
             }
         </section>
     );

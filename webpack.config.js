@@ -2,7 +2,7 @@ const cssPlugin = require('mini-css-extract-plugin');
 const htmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: "./src/index.js",
     output: {
         filename: "bundle.js"
